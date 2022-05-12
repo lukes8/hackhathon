@@ -64,9 +64,20 @@ Optional Kde je dar vystaven: na webu/ na inzerci (muze se vystavit nekde na inz
  
 ### TOOLS, LANGUAGES, TIPS FOR CODING:
 -	Angular, java, spring-boot, GPC, plugin na mapy, atd.
--	IDEA
--	…
 
+ General:
+ - Git from https://gitforwindows.org/
+ - Java from https://adoptopenjdk.net/releases.html
+ - Python from https://www.python.org/downloads/windows/ 
+ - Go from https://go.dev/doc/install
+ 
+ Frontend:
+ - NodeJs instalation from https://nodejs.org/en/download/ 
+ - Visual Studion code from https://code.visualstudio.com/download 
+ 
+GCP:
+ - Google Cloud SDK from https://cloud.google.com/sdk/docs/install
+ 
  
  
  Domain darujemejidlo.cz requested in name.com
