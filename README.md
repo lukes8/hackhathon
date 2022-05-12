@@ -1,4 +1,5 @@
 # hackhathon 2022 Ostrava
+https://darujemejidlo.cz/
 
 ## DARUJME JIDLO WEBAPP
  
@@ -81,5 +82,3 @@ GCP:
  
  
  Domain darujemejidlo.cz requested in name.com
- 
- http://darujemejidlo.cz/
