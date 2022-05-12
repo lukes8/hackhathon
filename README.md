@@ -52,17 +52,17 @@ Mam zajem: <pocet lidi majici zajem neco jako forma Like na facebooku>
 Optional Kde je dar vystaven: na webu/ na inzerci (muze se vystavit nekde na inzerci napr. V kauflandu) Je to jen typ rozsireni apky
  
 ### End pointy:
-•	Seznam vsech daru
-•	Seznam vsech useru registrovanych
-•	Seznam vsech lokaci s dary 
-•	Pridat dar, odebrat dar, upravit dar
-•	Pridat Like/zajem o dar 
-•	Administrace - user s admin pravy muze spravovat vsechny prispevky vcetne useru
-•	Pridat oznameni o daru - status o daru napr. vyzvednuto/nevyzvednuto/vyhozeno (pokud dar byl delsi dobu nevyzvednut, prijde do kose kvuli hromadeni)
-•	Pridat rezervaci daru pro usera 
-•	…
+-	Seznam vsech daru
+-	Seznam vsech useru registrovanych
+-	Seznam vsech lokaci s dary 
+-	Pridat dar, odebrat dar, upravit dar
+-	Pridat Like/zajem o dar 
+-	Administrace - user s admin pravy muze spravovat vsechny prispevky vcetne useru
+-	Pridat oznameni o daru - status o daru napr. vyzvednuto/nevyzvednuto/vyhozeno (pokud dar byl delsi dobu nevyzvednut, prijde do kose kvuli hromadeni)
+-	Pridat rezervaci daru pro usera 
+-	…
  
 ### TOOLS, LANGUAGES, TIPS FOR CODING:
-•	Angular, java, spring-boot, GPC, plugin na mapy, atd.
-•	IDEA
-•	…
+-	Angular, java, spring-boot, GPC, plugin na mapy, atd.
+-	IDEA
+-	…
