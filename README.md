@@ -1,7 +1,7 @@
 # hackhathon 2022 Ostrava
 https://darujemejidlo.cz/
 
-## DARUJME JIDLO WEBAPP
+## DARUJEME JIDLO WEBAPP
  
 ### WHAT:
 Webova aplikace, kde ma uzivatel moznost pridat nejakou formu daru - v tomto pripade bude darem jidlo.
@@ -23,6 +23,7 @@ Prejdu na web DarujemeJidlo a pridam darovane jidlo do systemu daru. Doplnim tak
  
 ### EXAMPLE WEB FORM:
 Priklad formulare (klasicky formular pro registrovane nebo anynonymni usery)
+```
 Nazev daru: Daruji brambory, mam jich prebytek a nevyuziju
 Nazev jidla: brambory/ovoce/konzervy/hotove jidlo
 Po zaruce: ano/ne
@@ -30,10 +31,11 @@ Druh jidla: kupovane/domaci/mrazene
 Misto daru/lokace: GPS souradnice, mapka googlu nebo seznamu s adresnim radkem
 Moznost rezervace: ano/ne (v tomto pripade je mozne se domluvit s darcem na miste predani a case)
 Datum umisteni daru/cas: dd.mm.yyyy
- 
+```
  
 ### EXAMPLE WEB HOMEPAGE:
 Priklad apky se seznamem daru (napr. Forma webu s HTML sablonou Card layout, kdy jednotlive dary budou videt v kartach vcetne user interface)
+```
 Nazev daru: Daruji jidlo po zaruce
 Cislo daru: 8
 Daruji jidlo: brambory, konzervy, sladkosti
@@ -41,8 +43,10 @@ Misto daru: Ostrava, hrabova,
 Rezervace: ano
 Kdy: 1.1.2022
 Mam zajem: <pocet lidi majici zajem neco jako forma Like na facebooku>
- 
+```
+
 Dalsi priklad:
+```
 Nazev daru: Daruji jidlo po zaruce
 Cislo daru: 8
 Daruji jidlo: brambory, konzervy, sladkosti
@@ -51,7 +55,8 @@ Rezervace: ano
 Kdy: 1.1.2022
 Mam zajem: <pocet lidi majici zajem neco jako forma Like na facebooku>
 Optional Kde je dar vystaven: na webu/ na inzerci (muze se vystavit nekde na inzerci napr. V kauflandu) Je to jen typ rozsireni apky
- 
+```
+
 ### End pointy:
 -	Seznam vsech daru
 -	Seznam vsech useru registrovanych
