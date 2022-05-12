@@ -66,3 +66,8 @@ Optional Kde je dar vystaven: na webu/ na inzerci (muze se vystavit nekde na inz
 -	Angular, java, spring-boot, GPC, plugin na mapy, atd.
 -	IDEA
 -	…
+
+ 
+ 
+ Domain darujemejidlo.cz requested in name.com
+ 
