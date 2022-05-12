@@ -82,4 +82,4 @@ GCP:
  
  Domain darujemejidlo.cz requested in name.com
  
- www.darujemejidlo.cz
+ http://darujemejidlo.cz/
