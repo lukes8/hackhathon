@@ -1,0 +1,269 @@
+{
+  "schema": {
+    "title": "Návšteva",
+    "description": "",
+    "type": "object",
+    "required": [
+      "date",
+      "type",
+      "comment"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "title": "Id",
+        "widget": {
+          "formlyConfig": {
+            "templateOptions": {
+              "readonly": true
+            }
+          }
+        }
+      },
+      "date": {
+        "type": "datepicker",
+        "title": "Datum návštevy",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "type": {
+        "type": "string",
+        "title": "Typ návštevy",
+        "widget": {
+          "formlyConfig": {
+            "type": "radio",
+            "templateOptions": {
+              "options": [
+                {
+                  "value": "SKYPE",
+                  "label": "Skype"
+                },
+                {
+                  "value": "MESSENGER",
+                  "label": "Messenger"
+                },
+                {
+                  "value": "PERSONAL",
+                  "label": "Osobne"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "comment": {
+        "type": "textarea-auto-resize",
+        "title": "Komentář"
+      },
+       "upperBellyProperty9": {
+        "type": "string",
+        "title": "dilek9",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty8": {
+        "type": "string",
+        "title": "dilek8",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty7": {
+        "type": "string",
+        "title": "dilek7",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty6": {
+        "type": "string",
+        "title": "dilek6",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty5": {
+        "type": "string",
+        "title": "dilek5",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty4": {
+        "type": "string",
+        "title": "dilek4",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty3": {
+        "type": "string",
+        "title": "dilek3",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty2": {
+        "type": "string",
+        "title": "dilek2",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "upperBellyProperty1": {
+        "type": "string",
+        "title": "dilek1",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "bellyButton": {
+        "type": "string",
+        "title": "pupek",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBelly": {
+        "title": "pod pupkem",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id",
+            "widget": {
+              "formlyConfig": {
+                "hideExpression": true
+              }
+            }
+          }
+        }
+      },
+      "lowerBellyProperty8": {
+        "type": "string",
+        "title": "dilek8",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty7": {
+        "type": "string",
+        "title": "dilek7",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty6": {
+        "type": "string",
+        "title": "dilek6",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty5": {
+        "type": "string",
+        "title": "dilek5",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty4": {
+        "type": "string",
+        "title": "dilek4",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty3": {
+        "type": "string",
+        "title": "dilek3",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty2": {
+        "type": "string",
+        "title": "dilek2",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "lowerBellyProperty1": {
+        "type": "string",
+        "title": "dilek1",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "image1": {
+        "type": "string",
+        "title": "image1",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "image2": {
+        "type": "string",
+        "title": "image2",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      },
+      "image3": {
+        "type": "string",
+        "title": "image3",
+        "widget": {
+          "formlyConfig": {
+            "className": "custom-short-input"
+          }
+        }
+      }
+    }
+  },
+  "model": {
+  }
+}
