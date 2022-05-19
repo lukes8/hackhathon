@@ -1,6 +1,15 @@
 package com.hackhathon.darujemejidlo.persistence.entity;
 
-import javax.persistence.*;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -11,7 +20,7 @@ import lombok.Data;
 @Entity
 @Table(name = "LOGIN")
 @Data
-public class Login {
+public class Login implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

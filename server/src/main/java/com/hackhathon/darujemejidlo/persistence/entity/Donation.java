@@ -1,5 +1,6 @@
 package com.hackhathon.darujemejidlo.persistence.entity;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -7,6 +8,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -20,9 +23,10 @@ import lombok.Data;
 @Entity
 @Table(name = "DONATION")
 @Data
-public class Donation {
+public class Donation implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "donation_id", nullable = false)
     private Long id;
 
@@ -33,7 +37,7 @@ public class Donation {
     private Boolean afterExpiration;
 
     @Column(name = "food_category", nullable = false)
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     private FoodCategory foodCategory;
 
     @Column(name = "donation_location", nullable = false)
