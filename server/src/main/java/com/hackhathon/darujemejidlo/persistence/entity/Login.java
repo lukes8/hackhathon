@@ -1,5 +1,7 @@
 package com.hackhathon.darujemejidlo.persistence.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +18,7 @@ import lombok.Data;
 @Entity
 @Table(name = "LOGIN")
 @Data
-public class Login {
+public class Login implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
