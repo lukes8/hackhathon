@@ -10,7 +10,7 @@ public class DonationService {
 
     public DonationWriteResponseDto createDonation(DonationWriteRequestDto donationWriteRequestDto) {
 
-
+        return null;
     }
 
 }

@@ -1,13 +1,8 @@
 package com.hackhathon.darujemejidlo.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -29,6 +24,8 @@ public class Login {
     @JsonProperty(access = Access.WRITE_ONLY)
     private String passwordHash;
 
+    @JsonBackReference
     @OneToOne(optional = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", unique = true, nullable = false)
     private User user;
 }
