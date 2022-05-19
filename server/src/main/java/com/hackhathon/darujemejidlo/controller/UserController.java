@@ -1,11 +1,10 @@
 package com.hackhathon.darujemejidlo.controller;
 
-import com.hackhathon.darujemejidlo.exception.UniqueUserException;
+import com.hackhathon.darujemejidlo.exception.UniqueLoginException;
 import com.hackhathon.darujemejidlo.persistence.entity.User;
 import com.hackhathon.darujemejidlo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +29,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<?> addUser(@Validated @RequestBody User user) throws UniqueUserException {
+    public ResponseEntity<?> addUser(@Validated @RequestBody User user) throws UniqueLoginException {
         return ResponseEntity.ok(userService.addUser(user));
     }
 }

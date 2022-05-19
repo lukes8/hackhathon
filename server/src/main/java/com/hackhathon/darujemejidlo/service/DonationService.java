@@ -6,7 +6,7 @@ import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.hackhathon.darujemejidlo.dto.DonationWriteRequestDto;
 import com.hackhathon.darujemejidlo.persistence.entity.Donation;
@@ -15,7 +15,7 @@ import com.hackhathon.darujemejidlo.persistence.repository.DonationRepository;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-@Component
+@Service
 @RequiredArgsConstructor
 public class DonationService {
 
@@ -55,7 +55,7 @@ public class DonationService {
     }
 
     public Donation getDonation(Long donationId) {
-        return donationRepository.findById(donationId).orElseThrow(() -> new EntityNotFoundException(String.format("Entitity %s with id %d not found.", Donation.class, donationId)));
+        return donationRepository.findById(donationId).orElseThrow(() -> new EntityNotFoundException(String.format("Entity %s with id %d not found.", Donation.class, donationId)));
     }
 
     public List<Donation> getAllDonation() {

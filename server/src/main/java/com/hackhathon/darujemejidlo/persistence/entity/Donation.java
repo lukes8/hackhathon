@@ -53,6 +53,7 @@ public class Donation implements Serializable {
     @JoinTable(
             name = "DONATION_USER",
             joinColumns = @JoinColumn(name = "donation_id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id"))
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
     private List<User> requestedByUser;
 }
