@@ -87,3 +87,5 @@ GCP:
  
  
  Domain darujemejidlo.cz requested in name.com
+
+![Architecture diagram](architecture.png?raw=true "Title")
