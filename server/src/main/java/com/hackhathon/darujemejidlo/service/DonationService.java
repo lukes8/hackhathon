@@ -22,10 +22,12 @@ public class DonationService {
     @NonNull
     DonationRepository donationRepository;
 
+
     @Transactional
     public void deleteDonation(Long donationId) {
         donationRepository.deleteById(donationId);
     }
+  
     @Transactional
     public Optional<Donation> updateDonation(DonationWriteRequestDto donationWriteRequestDto) {
         return donationRepository.findById(donationWriteRequestDto.getId())
@@ -39,6 +41,7 @@ public class DonationService {
                     return donationRepository.save(donation);
                 });
     }
+  
     @Transactional
     public Donation createDonation(DonationWriteRequestDto donationWriteRequestDto) {
         Donation donation = new Donation();

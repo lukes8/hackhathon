@@ -1,5 +1,6 @@
 package com.hackhathon.darujemejidlo.persistence.entity;
 
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -10,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -31,6 +33,8 @@ public class Login implements Serializable {
     @JsonProperty(access = Access.WRITE_ONLY)
     private String passwordHash;
 
+    @JsonBackReference
     @OneToOne(optional = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", unique = true, nullable = false)
     private User user;
 }
