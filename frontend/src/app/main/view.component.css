@@ -1,0 +1,16 @@
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 0;
+  text-align: left;
+}
