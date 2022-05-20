@@ -89,3 +89,11 @@ GCP:
  Domain darujemejidlo.cz requested in name.com
 
 ![Architecture diagram](architecture.drawio.png?raw=true "Title")
+
+Teams:
+ - Frontend (Lukas, Jozef, Irca)
+ - Rest Django (Vojta)
+ - Rest Spring Boot (Peter, Lukas)
+ - Db / Flyway (Amira)
+ - Map API (Vojta)
+ - Infra (Jirka)
