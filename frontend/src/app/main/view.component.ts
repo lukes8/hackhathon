@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewModel } from './view.model';
-import { ViewService } from './services/view.service';
+import { DonationService } from './services/donation.service';
 
 @Component({
   selector: 'app-view',
@@ -9,17 +9,18 @@ import { ViewService } from './services/view.service';
 })
 export class ViewComponent {
 
-  constructor(public model: ViewModel, private service: ViewService) {
+  constructor(public model: ViewModel, private service: DonationService) {
     service.getAll().subscribe(
       res => {
-        this.model.setCards(res);
+        this.model.setDonations(res);
       }
     );
   }
 
-  onLike(event, card) {
+  onLike(event, donation) {
     event.target.parentElement.disabled = true;
-    card.likes++;
-    this.service.update(card);
+    donation.likes++;
+    this.service.update(donation);
+
   }
 }

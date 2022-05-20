@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Card } from './model/card'
+import { Donation } from './model/donation'
 
 @Injectable()
 export class ViewModel {
-  cards: Card[];
+  donations: Donation[];
 
-  setCards(cards: Card[]) {
-    this.cards = cards;
+  setDonations(donations: Donation[]) {
+    this.donations = donations;
   }
 }
