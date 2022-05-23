@@ -1,0 +1,36 @@
+.app-rounded-bottom {
+
+    border-bottom-left-radius: 1.25rem !important;
+    border-bottom-right-radius: 1.25rem !important;
+    overflow: hidden;
+
+    /* border-top-left-radius: 0%;
+    border-top-right-radius: 0%; */
+    /* border-bottom: 15px solid rgb(13,110,253); */
+}
+
+.app-card-scale {
+    transition: all .1s ease-in;
+}
+
+.app-card-scale:hover {
+    transform: scale(1.03);
+}
+
+.hide {
+    display: none !important;
+}
+
+/* .app-list-group {
+    display: block;
+}
+
+.app-card:hover + .app-list-group {
+    display: none;    
+} */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
