@@ -1,43 +1,47 @@
-<div class="content" role="main">
+<div class="cards-container">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let card of this.model.cards">
-      <mat-card class="mat-elevation-z4">
-        <mat-card-header>
-          <mat-card-title>{{card.title}}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="./../assets/images/food.png">
-        <mat-card-content>
-          <table>
-            <tr>
-              <td class="td-left">Cislo daru:</td>
-              <td>{{card.id}}</td>
-            </tr>
-            <tr>
-              <td>Daruji jidlo:</td>
-              <td>{{card.type}}</td>
-            </tr>
-            <tr>
-              <td>Misto daru:</td>
-              <td>{{card.pickupPoint}}</td>
-            </tr>
-            <tr>
-              <td>Rezervace:</td>
-              <td>{{card.reservation ? 'Ano' : 'Ne'}}</td>
-            </tr>
-            <tr>
-              <td>Kdy:</td>
-              <td>{{card.pickupDate | date:'MM/dd/yyyy'}}</td>
-            </tr>
-            <tr>
-              <td>Mam zajem:</td>
-              <td>{{card.likes}}</td>
-            </tr>
-          </table>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button (click)="onLike($event, card)">LIKE</button>
-        </mat-card-actions>
-      </mat-card>
+    <div fxFlex="25">
+      <app-donation></app-donation>
     </div>
+      <div fxFlex="25"  *ngFor="let donation of this.model.donations">
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header>
+            <mat-card-title>{{donation.title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="./../assets/images/food.png">
+          <mat-card-content>
+            <table>
+              <tr>
+                <td class="td-left">Cislo daru:</td>
+                <td>{{donation.id}}</td>
+              </tr>
+              <tr>
+                <td>Daruji jidlo:</td>
+                <td>{{donation.type}}</td>
+              </tr>
+              <tr>
+                <td>Misto daru:</td>
+                <td>{{donation.pickupPoint}}</td>
+              </tr>
+              <tr>
+                <td>Rezervace:</td>
+                <td>{{donation.reservation ? 'Ano' : 'Ne'}}</td>
+              </tr>
+              <tr>
+                <td>Kdy:</td>
+                <td>{{donation.pickupDate | date:'MM/dd/yyyy'}}</td>
+              </tr>
+              <tr>
+                <td>Mam zajem:</td>
+                <td>{{donation.likes}}</td>
+              </tr>
+            </table>
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-button (click)="onLike($event, donation)">LIKE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+
   </div>
 </div>
