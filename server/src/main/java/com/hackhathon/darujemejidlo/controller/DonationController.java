@@ -54,6 +54,18 @@ public class DonationController {
         return new ResponseEntity<>(donationService.createDonation(donationWriteRequestDto), HttpStatus.CREATED);
     }
 
+    @PostMapping(path="/like/{donationId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.ALL_VALUE)
+    public ResponseEntity<Donation> likeDonation (@PathVariable("donationId") final Long donationId) {
+
+        return new ResponseEntity<>(donationService.likeDonation(donationId), HttpStatus.OK);
+    }
+
+    @DeleteMapping(path="/like/{donationId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.ALL_VALUE)
+    public ResponseEntity<Donation> unlikeDonation (@PathVariable("donationId") final Long donationId) {
+
+        return new ResponseEntity<>(donationService.unlikeDonation(donationId), HttpStatus.OK);
+    }
+
     @PutMapping(path="/{donationId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Donation> putDonation (@NotNull @RequestBody DonationWriteRequestDto donationWriteRequestDto) {
         if(donationWriteRequestDto.getId() == null) {

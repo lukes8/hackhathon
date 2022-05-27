@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.hackhathon.darujemejidlo.dto.DonationWriteRequestDto;
 import com.hackhathon.darujemejidlo.persistence.entity.Donation;
+import com.hackhathon.darujemejidlo.persistence.entity.User;
 import com.hackhathon.darujemejidlo.persistence.repository.DonationRepository;
 
 import lombok.NonNull;
@@ -56,6 +57,33 @@ public class DonationService {
 
     public Donation getDonation(Long donationId) {
         return donationRepository.findById(donationId).orElseThrow(() -> new EntityNotFoundException(String.format("Entity %s with id %d not found.", Donation.class, donationId)));
+    }
+
+
+    public Donation likeDonation(Long donationId) {
+
+        if (donationId != 0L) {
+            Donation donation = donationRepository.findById(donationId)
+                    .orElseThrow(() -> new EntityNotFoundException("Not found Donation with id = " + donationId));
+            //todo get user based on jwt token
+            //donation.getRequestedByUser().add();
+            donationRepository.save(donation);
+            return donation;
+        }
+        return null;
+    }
+
+
+    public Donation unlikeDonation(Long donationId) {
+        if (donationId != 0L) {
+            Donation donation = donationRepository.findById(donationId)
+                    .orElseThrow(() -> new EntityNotFoundException("Not found Donation with id = " + donationId));
+            //todo get user based on jwt token
+            //donation.getRequestedByUser().remove();
+            donationRepository.save(donation);
+            return donation;
+        }
+        return null;
     }
 
     public List<Donation> getAllDonation() {

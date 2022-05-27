@@ -44,9 +44,5 @@ public class User implements Serializable {
 
     @ManyToMany(mappedBy = "requestedByUser")
     private List<Donation> requestedDonations;
-/*
-    @JsonManagedReference
-    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE} )
-    @JoinColumn(name = "login_id", referencedColumnName = "user_id")
-    private Login login;*/
+
 }
