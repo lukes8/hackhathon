@@ -3,9 +3,6 @@ package com.hackhathon.darujemejidlo.controller;
 import com.hackhathon.darujemejidlo.exception.UniqueLoginException;
 import com.hackhathon.darujemejidlo.persistence.entity.User;
 import com.hackhathon.darujemejidlo.service.UserService;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -19,7 +16,6 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    @ApiOperation(value = "", authorizations = { @Authorization(value="Authorization") })
     public ResponseEntity getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }

@@ -10,7 +10,6 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import io.swagger.annotations.ApiImplicitParam;
 import lombok.Data;
 
 @Entity
