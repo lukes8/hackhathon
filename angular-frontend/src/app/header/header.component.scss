@@ -4,11 +4,19 @@ nav{
     position: absolute;
     width: 100%;
     left: 0; 
-    margin: 0 auto; 
+    margin: 0 auto;
+}
+
+.title{
+    float: left;
+    margin-left: 100px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
 }
 
 a{
     height: 50px;
+    position:relative;
     padding-top: 7px;
     width: 150px;
     text-align: center;
@@ -17,6 +25,9 @@ a{
     display: inline-block;
     font-size: smaller;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    &.active {
+        color: #000;
+    }
 }
 
 a:last-child{
@@ -30,6 +41,7 @@ a:hover{
 
 }
 
+
 .mat-toolbar{
     background-color: #ff8c00;
     color: #fff;
@@ -41,7 +53,24 @@ a:focus{
     color: #000;
 }
 
-h1{
-    padding-left: 100px;
+@media screen and (max-width: 700px) {
+    .title{
+        float: none;
+        display: block;
+        margin-left: 30%;
+
+    }
+
+    a{
+        float: left;
+        text-align: center;
+    }
+    .menu{
+        margin-left: 16%;
+    }
+
+    mat-toolbar{
+        height: 120px;
+    }
 }
 

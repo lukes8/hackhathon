@@ -1,12 +1,20 @@
 <h1>Pridat dar</h1>
-<form>
+<form @formAnim #addForm= "ngForm" (ngSubmit)= "addGood(addForm)">
 
+    <div [@addSuccess] (@addSuccess.start)="animationStarted($event)"
+        (@addSuccess.done)="animationEnded($event)" *ngIf="isSucess">
+        <h2>{{successMessage}}</h2>
+    </div>
+    
     <div class="row">
         <div class="col-xs-12">
            
             <div class="form-group">
                 <label for="title">Název jídla*</label>
                 <input
+                #title
+                ngModel
+                name="title"
                 type="text"
                 id="title"
                 class="form-control"
@@ -20,10 +28,13 @@
         <div class="col-xs-12">
            
             <div class="form-group">
-                <label for="title">Adresa*</label>
+                <label for="address">Adresa vyzvednutí*</label>
                 <input
+                #address
+                ngModel
                 type="text"
-                id="title"
+                id="address"
+                name="address"
                 class="form-control"
                 required
                 >
@@ -35,31 +46,82 @@
         <div class="col-xs-12">
            
             <div class="form-group">
-                <label for="title">Město*</label>
+                <label for="datePickedUp">Dátum a čas vyzvednutí*</label>
                 <input
-                type="text"
-                id="title"
+                #datePickedUp
+                ngModel
+                type="datetime-local"
+                id="datePickedUp"
+                name="datePickedUp"
                 class="form-control"
                 required
                 >
             </div>  
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+           
+            <div class="form-group">
+                <label for="description">Popis*</label>
+                <input
+                #description
+                ngModel
+                type="text"
+                id="description"
+                name="description"
+                class="form-control"
+                required
+                >
+            </div>  
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+           
+            <div class="form-group">
+                <label for="image">Obrázek*</label>
+                <input
+                (change)=" onSelectFile($event)"
+                    #image
+                    ngModel
+                    type="file"
+                    accept="image/*"
+                    id="image"
+                    name="image"
+                    required
+                >
+            </div>  
+        </div>
+    </div>
+    
     <div class="row">
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Možnost rezervace</label>
+            <input 
+                #reservation
+                ngModel
+                name="reservation"
+                class="form-check-input" 
+                type="checkbox" 
+                role="switch" 
+                id="reservation">
+            <label class="form-check-label" for="reservation">Možnost rezervace</label>
         </div>
     </div>
     <div class="row">
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Po zaruce</label>
+            <input #afterGuarantee
+            ngModel class="form-check-input" type="checkbox" role="switch" id="afterGuarantee">
+            <label class="form-check-label" for="afterGuarantee">Po zaruce</label>
         </div>
     </div>
+
    <button   
-        type="submit"  
+        [disabled] = "!addForm.valid"  
+        type="submit"
         class="btn btn-large">
-        Odoslat
+        Odeslat
     </button>
 </form>

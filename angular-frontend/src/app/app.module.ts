@@ -11,13 +11,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ListGoodsComponent } from './list-goods/list-goods/list-goods.component';
 import { AddGoodsComponent } from './add-goods/add-goods.component';
 import { HeaderComponent } from './header/header.component';
+import { YesNoPipe } from './pipes/yes-no.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListGoodsComponent,
     AddGoodsComponent,
-    HeaderComponent
+    HeaderComponent,
+    YesNoPipe
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { HeaderComponent } from './header/header.component';
     MatToolbarModule,
     MatButtonModule,
     FlexLayoutModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

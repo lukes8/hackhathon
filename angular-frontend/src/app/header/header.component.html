@@ -1,11 +1,12 @@
 <mat-toolbar color="primary">
-    <h1 >Darujemejidlo.cz</h1>
     <nav>
-      <a 
-          routerLinkActive="active" 
-          routerLink="/list" 
-          [routerLinkActiveOptions]="{ exact: true }">
-          Zoznam darov</a>
-      <a routerLinkActive="active" routerLink="/add">Pridat dar</a>   
+      <a href="/list"  class="title">Darujemejidlo.cz</a>
+      <div class="menu">
+        <a routerLinkActive="active" 
+            routerLink="/list" 
+            [routerLinkActiveOptions]="{ exact: true }">
+            Zoznam darov</a>
+        <a routerLinkActive="active" routerLink="/add">Pridat dar</a>  
+      </div> 
   </nav>
   </mat-toolbar>

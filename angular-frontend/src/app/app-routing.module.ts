@@ -4,9 +4,10 @@ import { AddGoodsComponent } from './add-goods/add-goods.component';
 import { ListGoodsComponent } from './list-goods/list-goods/list-goods.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: '', redirectTo: '/list', pathMatch: 'full'},
   { path: 'list', component: ListGoodsComponent},
   { path: 'add', component: AddGoodsComponent, },
+  { path: '**', redirectTo:'/list'}
 ];
 
 @NgModule({

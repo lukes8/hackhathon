@@ -1,24 +1,27 @@
 
   <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
-        <mat-card class="mat-elevation-z4" >
+      <div fxFlex="25%" [ngClass]="[item.isReserved == true ? 'card-dasabled' : '']" fxFlex.xs="100%" fxFlex.sm="45%" *ngFor="let item of goods">
+        <mat-card class="mat-elevation-z4" [ngClass]="[item.isReserved == true ? 'card-dasabled' : '']" >
           <mat-card-header>
-            <mat-card-title>Daruji brambory</mat-card-title>
+            <mat-card-title>{{item.title}}</mat-card-title>
           </mat-card-header>
-          <img src="./../assets/potatoes.jpg">
+          <img [src]="item.urlImage">
           <mat-card-content>
-            <h4>Po zaruce:</h4>
-            <p>Ano</p>
             <h4>Misto daru/lokace:</h4>
-            <p>Mesta brno arm generala piky</p>
-            <h4>Moznost rezervace:</h4>
-            <p>Ano</p>
+            <p>{{item.address}}</p>
             <h4>Datum umisteni daru/cas:</h4>
-            <p>22.8.2022 13:00</p>
+            <p>{{item.datePickedUp | date:'medium' }}</p>
+            <h4>Po zaruce:</h4>
+            <p>{{item.afterGuarantee | yesNo}}</p>
+
+            <h4>Popis:</h4>
+            <p>{{item.description}}</p>
           </mat-card-content>
           <mat-card-actions>
-            <button (click)="increaseLikes()" mat-button>LIKE {{likes}}</button>
+            <button (click)="increaseLikes(item)" [ngClass]="[item.likeYou == true ? 'button-active' : 'button-standard']" mat-button>Like {{item.numberOfLikes}}</button>
+            <button *ngIf="item.reservation && !item.isReserved" (click)="makeReservation(item)" mat-button>Rezervovat</button>
+            <button *ngIf="item.isReserved" disabled (click)="makeReservation(item)" [ngClass]="[item.isReserved == true ? 'button-active' : 'button-standard']" mat-button>Rezervovano</button>
           </mat-card-actions>
         </mat-card>
       </div>
